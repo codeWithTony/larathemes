@@ -1,0 +1,27 @@
+{
+  "name": "codewithtony/larathemes",
+  "description": "Theme Manager for Laravel 5",
+  "keywords": [ "Laravel 5", "Themes", "Laravel Theme", "Theme Manager" ],
+  "homepage": "https://github.com/codewithtony/larathemes",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tony.",
+      "email": "tony@codewithtony.com",
+      "homepage": "http://www.codewithtony.com"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/codewithtony/larathemes/issues"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "laravel/framework": "5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tony\\Themes\\": "src/Tony/Themes/"
+    }
+  }
+}
