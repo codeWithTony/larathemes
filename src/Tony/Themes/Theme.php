@@ -14,7 +14,7 @@ class Theme
 	public function set($name, $absolute_path = null)
 	{
 		// Use default /larathemes/ directory if other is not set
-		if(empty($absolute_path)) $absolute_path = base_path('larathemes/'.$name);
+		if(empty($absolute_path)) $absolute_path = base_path('themes/'.$name);
 		// remove any other theme that was previously set
 		if(!empty($this->theme)) app('view.finder')->removeLocation($this->theme.'/views');
 		//set theme and add location to view file finder

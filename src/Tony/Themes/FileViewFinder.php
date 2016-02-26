@@ -26,7 +26,7 @@ class FileViewFinder extends IlluminateViewFinder
 	public function removeLocation($location)
 	{
 		//find and remove location if set
-		if($key = array_search($location, $this->paths)) {
+		if(($key = array_search($location, $this->paths)) == false) {
 			unset($this->paths[$key]);
 		}
 	}

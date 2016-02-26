@@ -13,11 +13,14 @@ class ThemeServiceProvider extends ServiceProvider
 	 */
 	public function register()
 	{
-		$this->app['view.finder'] = $this->app->share(function($app) {
-			$paths = View::getFinder()->getPaths();
+		$this->app->singleton('view.finder', function($app) {
+			$paths = $app['config']['view.paths'];
 			return new FileViewFinder($app['files'], $paths);
 		});
 		View::setFinder(app('view.finder'));
-		$this->app->bind('tony.larathemes', 'Tony\Themes\Theme');
+
+		$this->app->singleton('theme', function($app) {
+			return new Theme();
+		});
 	}
 }
