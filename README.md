@@ -15,7 +15,7 @@ At `composer.json` of your Laravel installation, add the following require line:
 ``` json
 {
     "require": {
-        "codewithtony/larathemes": "~1.0"
+        "codewithtony/larathemes": "1.*"
     }
 }
 ```
