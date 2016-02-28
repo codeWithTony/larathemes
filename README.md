@@ -28,6 +28,12 @@ At `config/app.php`, add the Service Provider and the Facade:
     'providers' => [
         Tony\Themes\ThemeServiceProvider::class,
     ]
+
+	//...
+
+	'aliases' => [
+	  'Theme' => Tony\Themes\Themes\ThemeFacade::class,
+	],
 ```
 
 ## <a id="usage"></a>Usage
@@ -50,14 +56,14 @@ themes
 Changing your theme is easy. 
 
 ```php
-app('theme')->set('my-theme')
+Theme::set('my-theme')
 ```
 
 Easily use it to change the theme for an entire group
 
 ```php
 Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    app('theme')->set('admin');
+    Theme::set('admin');
     
     //...
 });

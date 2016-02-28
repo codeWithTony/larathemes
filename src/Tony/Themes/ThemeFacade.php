@@ -8,5 +8,5 @@ class ThemeFacade extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'tony.themes'; }
+	protected static function getFacadeAccessor() { return 'theme'; }
 }
