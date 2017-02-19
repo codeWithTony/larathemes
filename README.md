@@ -10,17 +10,11 @@
 
 ### Laravel 5.1+
 
-At `composer.json` of your Laravel installation, add the following require line:
+Install Laravel Theme manager:
 
 ``` json
-{
-    "require": {
-        "codewithtony/larathemes": "1.*"
-    }
-}
+composer require codewithtony/larathemes
 ```
-
-Run `composer update` to add the package to your Laravel app.
 
 At `config/app.php`, add the Service Provider and the Facade:
 
