@@ -1,4 +1,4 @@
-# LaraTheme
+# Laravel Theme
 
 **The simpliest of theme switching for Laravel 5**
 
