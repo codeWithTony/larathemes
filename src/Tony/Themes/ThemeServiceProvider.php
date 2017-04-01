@@ -1,10 +1,16 @@
 <?php namespace Tony\Themes;
 
+use Illuminate\Routing\Router;
 use View;
 use Illuminate\Support\ServiceProvider;
 
 class ThemeServiceProvider extends ServiceProvider
 {
+
+	public function boot(Router $router)
+	{
+		$router->aliasMiddleware('theme', ThemeMiddleware::class);
+	}
 
 	/**
 	 * Register the service provider.
