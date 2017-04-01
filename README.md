@@ -23,11 +23,11 @@ At `config/app.php`, add the Service Provider and the Facade:
         Tony\Themes\ThemeServiceProvider::class,
     ]
 
-	//...
+    //...
 
-	'aliases' => [
-	  'Theme' => Tony\Themes\Themes\ThemeFacade::class,
-	],
+    'aliases' => [
+        'Theme' => Tony\Themes\Themes\ThemeFacade::class,
+    ]
 ```
 
 ## <a id="usage"></a>Usage
@@ -47,31 +47,29 @@ themes
 
 ### Setting a theme
 
-Changing your theme is easy. 
+Changing your theme is easy
 
 ```php
 Theme::set('my-theme')
 ```
 
-Easily use it to change the theme for an entire group
+Easily use the Middleware to change themes for an entire group
 
 ```php
-Route::group(['prefix' => 'admin', 'middleware' => 'admin'], function () {
-    Theme::set('admin');
-    
+Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'theme:admin'], function () {
     //...
 });
 ```
 
 ### Calling a view
 
-Load your views like normal, LaraTheme will look for you view in the set theme. If it does not find it, view finding will remain the same 
+Load your views like normal, Laravel Theme will look for your view in the set theme and if it isn't found, view finding will remain the same 
 
 You can reuse views by storing them outside of your theme and just uses view('layout.master') and have your layout/master.blade.php inside you themes.
 
 ### Assets
 
-Your assets will need to be in your public folder still.
+Your assets will need to be sent to your public folder still.
 
 ## <a id="contibute"></a>Contribute
 
