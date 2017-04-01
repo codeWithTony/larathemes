@@ -2,8 +2,8 @@
 
 **The simpliest of theme switching for Laravel 5**
 
-<a href="#installation">Installation</a>
-<a href="#usage">Usage</a>
+- <a href="#installation">Installation</a>
+- <a href="#usage">Usage</a>
 
 
 ## <a id="installation"></a>Installation
